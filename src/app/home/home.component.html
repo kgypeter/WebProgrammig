@@ -1,0 +1,43 @@
+<div class="container">
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <br>
+                <h2>Welcome!</h2>
+                <p>Successful Log In</p>
+                <button class="btn btn-primary" (click)="logout()">Log out</button>
+            </div>
+        </section>
+        <br>
+        <div class="mydiv">
+            <h2>How did your day look like?</h2>
+            <section>
+                <p>Eat</p>
+                <mat-slider>
+                    <input matSliderThumb>
+                </mat-slider>
+                <p>Code</p>
+                <mat-slider>
+                    <input matSliderThumb>
+                </mat-slider>
+                <p>Rest</p>
+                <mat-slider>
+                    <input matSliderThumb>
+                </mat-slider>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 This is my Website</p>
+    </footer>
+</div>

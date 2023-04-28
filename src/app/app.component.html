@@ -1,0 +1,34 @@
+
+<div class="auth-form-container" *ngIf="!isSignedIn">
+  <br>
+  <div class="auth-form auth-form-signup">
+    <h2>Registration</h2>
+    <div class="form-group">
+      <label for="emailSignup">Email:</label>
+      <input type="email" id="emailSignup" name="emailSignup" #emailSignup required>
+    </div>
+    <div class="form-group">
+      <label for="passwordSignup">Password:</label>
+      <input type="password" id="passwordSignup" name="passwordSignup" #passwordSignup required>
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit"
+      (click)="signup(emailSignup.value, passwordSignup.value)">Registration</button>
+  </div>
+  <br>
+  <div class="auth-form auth-form-signin">
+    <h2>Sign in</h2>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" #email required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" #password required>
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" (click)="signin(email.value, password.value)">Sign in</button>
+  </div>
+  <br>
+</div>
+<app-home *ngIf="isSignedIn" (isLogout)="logout()"></app-home>
